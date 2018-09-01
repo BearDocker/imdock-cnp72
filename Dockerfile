@@ -11,10 +11,10 @@ RUN yum -y install vim wget tar
 RUN yum -y groupinstall development
 RUN yum -y install perl-CPAN zlib zlib-devel curl-devel
 
-# Install PHP7-FPM (https://webtatic.com/packages/php71)
+# Install PHP7-FPM (https://webtatic.com/packages/php72)
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-RUN yum -y install --enablerepo=webtatic-testing php71w-fpm php71w-opcache php71w-cli php71w-gd php71w-imap php71w-mysqlnd php71w-mbstring php71w-mcrypt php71w-pdo php71w-pecl-apcu php71w-pecl-mongodb php71w-pecl-redis php71w-pgsql php71w-xml php71w-xmlrpc
+RUN yum -y install --enablerepo=webtatic-testing php72w-fpm php72w-opcache php72w-cli php72w-gd php72w-imap php72w-mysqlnd php72w-mbstring php72w-mcrypt php72w-pdo php72w-pecl-apcu php72w-pecl-mongodb php72w-pecl-redis php72w-pgsql php72w-xml php72w-xmlrpc
 
 # Install Nginx
 RUN rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm && \

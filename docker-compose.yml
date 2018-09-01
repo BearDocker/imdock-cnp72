@@ -7,14 +7,14 @@ services:
     #--------------------------------------
     imdock-cnp7:
         restart: always
-        image: imagine10255/imdock:cnp7
-#        build:
-#          context: .
-#          dockerfile: Dockerfile
-        container_name: {project-sn}
+        image: imagine10255/imdock-cnp72
+        build:
+          context: .
+          dockerfile: Dockerfile
+        container_name: imdock-cnp72
         working_dir: /var/www
         ports:
-            - "2002:80"
+            - "2004:80"
 #            - "443:443"
 #            - "8122:22"
 #            - "9100:9000"
